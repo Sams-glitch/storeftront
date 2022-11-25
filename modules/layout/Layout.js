@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import React from 'react';
-import Footer from '../Footer';
+import Footer from './Footer';
 import Header from './Header';
 
 export default function Layout({ title, children }) {
@@ -16,14 +16,12 @@ export default function Layout({ title, children }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="flex flex-col min-h-screen overflow-hidden">
-        <div className="w-full shadow-md">
+      <div className="flex flex-col min-h-screen justify-between overflow-hidden">
+        <div className="w-full shadow-md fixed z-20 top-0 left-0 bg-white">
           <Header />
         </div>
 
-        <main className="w-full md:w-3/4 mx-auto py-4 md:space-x-3">
-          {children}
-        </main>
+        <main className="container m-auto py-32 mx-4 md:mx-0">{children}</main>
 
         <Footer />
       </div>
