@@ -4,17 +4,19 @@ import React from 'react';
 function ProductCard({ product }) {
   return (
     <div key={product.id} className="group relative">
-      <div className="min-h-48 aspect-w-1 aspect-h-1 w-full overflow-hidden group-hover:opacity-75 lg:aspect-none lg:h-48 rounded-t shadow-md">
+      <div className="min-h-48 w-full overflow-hidden group-hover:opacity-75 lg:aspect-none lg:h-48 rounded-t shadow-md">
         <Image
-          src={"https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-01.jpg"}
+          src={
+            'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-01.jpg'
+          }
           alt={product.slug}
-          height={650}
-          width={650}
+          height={300}
+          width={300}
           className="h-full w-full object-cover object-center lg:h-full lg:w-full"
         />
       </div>
-      <div className="rounded-b flex py-4 px-2">
-        <div className='w-1/2'>
+      <div className="rounded-b inline-flex justify-between py-4 px-2">
+        <div className="">
           <h3 className="text-xs text-gray-900">{product.title}</h3>
         </div>
         <div className="inline-flex space-x-1">

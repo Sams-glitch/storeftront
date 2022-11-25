@@ -8,7 +8,7 @@ import styles from '../styles/Home.module.css';
 export default function Home({ products }) {
   return (
     <Layout>
-      <Banner />
+      {/* <Banner /> */}
       {/* categories */}
       {/* <div className="w-full border-b py-4 -ml-4 overflow-hidden">
         <h1 className="text-xl font-extrabold">Shop by Category</h1>
@@ -43,12 +43,12 @@ export default function Home({ products }) {
         </div> 
       </div> */}
 
-      <div className="w-full mx-auto py-8 sm:py-12">
+      <div className="w-full mx-auto py-8 px-4 sm:py-12">
         <h2 className="text-2xl font-bold tracking-tight text-gray-900">
           Customers also purchased
         </h2>
 
-        <div className="mt-6 grid grid-cols-1 gap-y-5 gap-x-5 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="mt-6 grid grid-cols-2 md:grid-cols-5 lg:grid-cols-5 gap-x-5">
           {products.slice(0, 8).map((product) => (
             <ProductCard product={product} key={product.slug} />
           ))}
