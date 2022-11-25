@@ -5,7 +5,7 @@ import Link from 'next/link';
 function Header() {
   return (
     <>
-      <header className="md:w-3/4 mx-auto py-4 sm:-px-4 md:space-x-3 sticky">
+      <header className="md:w-3/4 mx-auto py-4 px-3 md:space-x-3 sticky">
         <div className="grid grid-flow-row-dense sm:grid-cols-2 md:grid-cols-7 sm:gap-x-3 md:gap-x-12 text-emerald-700 mt-3 w-full">
           <div className="col-span-1">
             <div className="text-left inline-flex items-center space-x-2 basis-2/3">
