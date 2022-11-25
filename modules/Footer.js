@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="border-t w-full">
       <div className="w-full md:w-3/4 mx-auto py-8 md:space-x-3">
         {/* footer */}
-        <div className="grid grid-flow-row-dense grid-cols-2 md:grid-cols-5 gap-y-5 gap-x-6 w-full sm:px-6 md:px-0">
+        <div className="grid grid-flow-row-dense grid-cols-2 md:grid-cols-5 gap-y-5 gap-x-6 w-full px-4">
           <div className="col-span-2 md:col-span-1 inline-flex items-start">
             <span>
               <ShoppingBagIcon className="h-10 w-10" />
@@ -28,7 +28,7 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="md:mt-8 sm:px-6 md:px-0 border-t">
+        <div className="mt-4 md:mt-8 px-4 border-t">
           <h1 className="py-6">2022 Store, All rights reserved</h1>
         </div>
       </div>
