@@ -17,7 +17,7 @@ export default function Footer() {
           <div>
             <ul className='flex flex-col items-start space-y-3'>
               <li>About us</li>
-              <li>Terems of use</li>
+              <li>Terms of use</li>
               <li>Shipping</li>
               <li>Returns</li>
             </ul>
