@@ -4,7 +4,7 @@ import React from 'react';
 export default function Footer() {
   return (
     <footer className="border-t w-full">
-      <div className="w-full md:w-3/4 mx-auto py-8 md:space-x-3">
+      <div className="w-full md:w-3/4 mx-auto py-8 sm:px-6 md:px-0 md:space-x-3">
         {/* footer */}
         <div className="grid grid-flow-row-dense grid-cols-2 md:grid-cols-5 gap-y-5 gap-x-6 w-full">
           <div className="col-span-2 md:col-span-1 inline-flex items-start">
@@ -15,7 +15,7 @@ export default function Footer() {
             <span className="invisible"></span>
           </div>
           <div>
-            <ul className='flex flex-col items-start space-y-3'>
+            <ul className="flex flex-col items-start space-y-3">
               <li>About us</li>
               <li>Terms of use</li>
               <li>Shipping</li>
