@@ -28,7 +28,7 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="md:mt-8 border-t">
+        <div className="md:mt-8 sm:px-6 md:px-0 border-t">
           <h1 className="py-6">2022 Store, All rights reserved</h1>
         </div>
       </div>
