@@ -48,7 +48,7 @@ export default function Home({ products }) {
           Customers also purchased
         </h2>
 
-        <div className="mt-6 grid grid-cols-2 md:grid-cols-5 lg:grid-cols-5 gap-x-5">
+        <div className="mt-6 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-x-5">
           {products.slice(0, 8).map((product) => (
             <ProductCard product={product} key={product.slug} />
           ))}
