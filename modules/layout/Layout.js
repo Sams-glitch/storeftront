@@ -13,7 +13,7 @@ export default function Layout({ title, children }) {
       </Head>
 
       <div className="flex flex-col w-full h-screen overflow-hidden">
-        <div className="md:w-3/4 mx-auto py-4 sm:-px-4 md:space-x-3 shadow-md">
+        <div className="w-full shadow-md">
           <Header />
         </div>
 
