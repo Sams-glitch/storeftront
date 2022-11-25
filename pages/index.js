@@ -45,7 +45,7 @@ export default function Home({ products }) {
 
       <div className="w-full mx-auto py-8 px-4 sm:py-12">
         <h2 className="text-2xl font-bold tracking-tight text-gray-900">
-          Customers also purchased
+          Items worth your attention
         </h2>
 
         <div className="mt-6 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-x-5">
