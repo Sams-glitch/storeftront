@@ -6,7 +6,7 @@ function Header() {
   return (
     <>
       <header className="md:w-3/4 mx-auto py-4 px-3 md:space-x-3 sticky">
-        <div className="grid grid-flow-row-dense sm:grid-cols-2 md:grid-cols-7 sm:gap-x-3 md:gap-x-12 text-emerald-700 mt-3 w-full">
+        <div className="grid grid-flow-row-dense sm:grid-cols-2 md:grid-cols-7 gap-y-4 sm:gap-x-3 md:gap-x-12 text-emerald-700 mt-3 w-full">
           <div className="col-span-1">
             <div className="text-left inline-flex items-center">
               <ShoppingBagIcon className="h-8 w-8" />
@@ -18,7 +18,7 @@ function Header() {
               <div className="md:w-4/5 mx-auto">
                 <input
                   type="search"
-                  className="w-full py-1 px-3 placeholder:text-gray-500 placeholder:text-sm rounded outline-none border"
+                  className="w-full py-2 md:py-1.5 px-3 placeholder:text-gray-500 placeholder:text-sm rounded outline-none border"
                   placeholder="Store, Collection, brands etc ..."
                 />
               </div>
@@ -32,7 +32,7 @@ function Header() {
           </div>
         </div>
 
-        <div className="mt-3 w-full">
+        <div className="mt-3 w-full show-for-small hidden md:block">
           <nav className="inline-flex space-x-3 text-sm font-medium text-emerald-700 tracking-tight md:-ml-2">
             <Link href={'/'}>All</Link>
             <Link href={'/'}>Category 1</Link>

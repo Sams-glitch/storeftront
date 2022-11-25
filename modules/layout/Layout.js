@@ -21,7 +21,9 @@ export default function Layout({ title, children }) {
           <Header />
         </div>
 
-        <main className="md:w-3/4 mx-auto py-4 md:space-x-3">{children}</main>
+        <main className="w-full md:w-3/4 mx-auto py-4 md:space-x-3">
+          {children}
+        </main>
 
         <Footer />
       </div>
