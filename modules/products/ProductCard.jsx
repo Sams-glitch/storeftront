@@ -16,10 +16,10 @@ function ProductCard({ product }) {
         />
       </div>
       <div className="rounded-b inline-flex justify-between py-4 px-2">
-        <div className="">
+        <div className='w-1/2'>
           <h3 className="text-xs text-gray-900">{product.title}</h3>
         </div>
-        <div className="inline-flex space-x-1">
+        <div className="inline-flex space-x-1 items-end justify-end">
           <p className="text-sm font-medium text-gray-900">{product.price}</p>
           <p className="text-xs font-medium text-red-600 line-through">
             {product.price}
