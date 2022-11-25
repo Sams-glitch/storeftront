@@ -48,13 +48,33 @@ export default function Home({ products }) {
           Items worth your attention
         </h2>
 
-        <div className="mt-6 grid grid-flow-row-dense grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-x-5">
-          {products.slice(0, 6).map((product) => (
+        <div className="mt-6 grid grid-flow-row-dense grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-y-5 gap-x-6">
+          {products.slice(0, 3).map((product) => (
             <ProductCard product={product} key={product.slug} />
           ))}
 
           <div className="col-span-2 md:col-span-2">
-            {products.slice(0, 2).map((product) => (
+            {products.slice(0, 1).map((product) => (
+              <ProductCard product={product} key={product.slug} />
+            ))}
+          </div>
+
+          {products.slice(0, 2).map((product) => (
+            <ProductCard product={product} key={product.slug} />
+          ))}
+
+          <div className="col-span-2 md:col-span-2">
+            {products.slice(0, 1).map((product) => (
+              <ProductCard product={product} key={product.slug} />
+            ))}
+          </div>
+
+          {products.slice(0, 3).map((product) => (
+            <ProductCard product={product} key={product.slug} />
+          ))}
+
+          <div className="col-span-2 md:col-span-3">
+            {products.slice(0, 1).map((product) => (
               <ProductCard product={product} key={product.slug} />
             ))}
           </div>
