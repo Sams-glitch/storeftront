@@ -1,6 +1,6 @@
 import { ArrowLongLeftIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
-import Layout from '../modules/layout/Layout';
+import Layout from '../../modules/layout/Layout';
 
 export default function ProductDetails() {
   return (

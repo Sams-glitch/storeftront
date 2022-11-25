@@ -10,7 +10,7 @@ export default function Home({ products }) {
             Items worth your attention
           </h2>
 
-          <div className="mt-3 md:mt-4 grid grid-flow-row-dense grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-y-5 gap-x-6">
+          <div className="mt-3 grid grid-flow-row-dense grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-y-5 gap-x-6">
             {products.slice(0, 3).map((product) => (
               <ProductCard product={product} key={product.slug} />
             ))}
