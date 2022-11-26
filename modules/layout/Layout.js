@@ -21,7 +21,9 @@ export default function Layout({ title, children }) {
           <Header />
         </div>
 
-        <main className="container py-32 mx-auto md:mx-0 min-w-full">{children}</main>
+        <main className="container py-32 mx-auto md:mx-0 min-w-full">
+          {children}
+        </main>
 
         <Footer />
       </div>
