@@ -2,8 +2,10 @@ import React, { useContext, useEffect, useState } from 'react';
 import { ShoppingBagIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import { Store } from '../../utils/Store';
+import { useSession } from 'next-auth/react';
 
 function Header() {
+  const { status, data: session } = useSession();
   // store data provider
   const { state } = useContext(Store);
   // get cart from state
@@ -38,9 +40,15 @@ function Header() {
           </div>
           <div className="block ml-auto">
             <div className="inline-flex items-center space-x-3">
-              <Link href={'/login'} className="text-sm underline">
-                login
-              </Link>
+              <span className="text-sm underline">
+                {status === 'loading' ? (
+                  '...'
+                ) : session?.user ? (
+                  session.user.name
+                ) : (
+                  <Link href={'/login'}>Login</Link>
+                )}
+              </span>
               <Link href={'/my-cart'} className="relative">
                 <ShoppingBagIcon className="h-7 w-7 font-extrabold" />
                 {cartItemsCount > 0 && (

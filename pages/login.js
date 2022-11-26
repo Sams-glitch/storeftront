@@ -82,21 +82,26 @@ export default function LoginScreen() {
                     },
                   })}
                   className="w-full py-3 px-4 placeholder:text-gray-600 border outline-none"
-                  aut
                 />
                 {errors.password && (
                   <div className="text-red-500 ">{errors.password.message}</div>
                 )}
               </div>
               <div className="mb-4">
-                <button className="w-full py-2 px-3 bg-emerald-700 text-white">
+                <button
+                  type="submit"
+                  className="w-full py-2 px-3 bg-emerald-700 text-white"
+                >
                   Login
                 </button>
               </div>
               <div className="mb-4">
                 <p>
                   Don&apos;t have an account? &nbsp; {''}{' '}
-                  <Link href={'/register'} className="text-blue-700">
+                  <Link
+                    href={`/register?redirect=${redirect || '/'}`}
+                    className="text-blue-700"
+                  >
                     Register
                   </Link>
                 </p>
