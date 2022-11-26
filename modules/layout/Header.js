@@ -1,8 +1,20 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { ShoppingBagIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
+import { Store } from '../../utils/Store';
 
 function Header() {
+  // store data provider
+  const { state } = useContext(Store);
+  // get cart from state
+  const { cart } = state;
+
+  // track state for client and server side
+  const [cartItemsCount, setCartItemsCount] = useState();
+  useEffect(() => {
+    setCartItemsCount(cart.cartItems.reduce((a, c) => a + c.quantity, 0));
+  }, []);
+
   return (
     <>
       <header className="md:w-3/4 mx-auto py-4 px-3 md:space-x-3">
@@ -26,8 +38,17 @@ function Header() {
           </div>
           <div className="block ml-auto">
             <div className="inline-flex items-center space-x-3">
-              <h3 className="text-sm underline">Account</h3>
-              <ShoppingBagIcon className="h-7 w-7 font-extrabold" />
+              <Link href={'/login'} className="text-sm underline">
+                login
+              </Link>
+              <Link href={'/my-cart'} className="relative">
+                <ShoppingBagIcon className="h-7 w-7 font-extrabold" />
+                {cartItemsCount > 0 && (
+                  <span className="inline-flex items-center absolute top-0 right-0 left-3 bottom-3 text-gray-900 text-sm font-extrabold py-1 px-3 rounded-full dark:bg-red-200 dark:text-red-900">
+                    {cartItemsCount}
+                  </span>
+                )}
+              </Link>
             </div>
           </div>
         </div>
